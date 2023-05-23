@@ -63,28 +63,28 @@ while lop==0:
                 print("Ingrese un caracter valido. ")
     
             if eleccion=="1":
-                totalrecaudado=totalrecaudado+churrasco
+             
                 cosascompradas=cosascompradas+"Churrasco "
                 total=total+churrasco
                 cantidad_chur=cantidad_chur+1
                 totalchurrascos+=1
                 print("Usted ordeno un churrasco. 1.500 ")
             if eleccion=="2":
-                totalrecaudado=totalrecaudado+completo
+                
                 cosascompradas=cosascompradas+"Completo "
                 total=total+completo
                 cantidad_comple=cantidad_comple+1
                 totalcomple+=1
                 print("Usted ordeno un Completo 1.000 ")
             if eleccion=="3":
-                totalrecaudado=totalrecaudado+vegetariano
+               
                 cosascompradas=cosascompradas+"Vegetariano "
                 total=total+vegetariano
                 cantidad_vege=cantidad_vege+1
                 totalvegetarianos+=1
                 print("Usted ordeno un Vegetariano 2.000 ")
             if eleccion=="4":
-                totalrecaudado=totalrecaudado+barros_Luco
+           
                 cosascompradas=cosascompradas+"Barros Luco "
                 total=total+barros_Luco
                 cantidad_barro=cantidad_barro+1
@@ -106,11 +106,13 @@ while lop==0:
                 if elige not in ("1" , "2"):
                     print("Elige una opcion valida !! ")
                 if elige=="1":
+                    totalrecaudado=totalrecaudado+descontadototal
                     descontado=total/10
                     descontadototal=total-descontado
                     
                     print("-----------El total de su compra es-----------: ", descontadototal)
                 if elige=="2":
+                    totalrecaudado=totalrecaudado+total
                     print("-----------El total de su compra es-----------: ", total)
                 #{}
                 boleta=(f"Nombre cliente:{nombre} \nChurrascos: {cantidad_chur}\nBarros luco:{cantidad_barro}\nVegatarianos:{cantidad_vege}\nCompletos:{cantidad_comple}\nTotal:{total}\nDescon:{descontadototal}")
